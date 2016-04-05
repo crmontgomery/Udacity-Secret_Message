@@ -22,6 +22,7 @@ def message_seed():
     return 0.2978
 
 #method used to scramble or descramble a message
+#http://stackoverflow.com/questions/9072955/random-shuffle-randomness
 def scramble_message(secret_directory, message, code_form):
     scrambled_message = message
     #shuffles the message based on a user-defined seed
@@ -41,7 +42,8 @@ def encode(secret_directory):
 
     scrambled_message = secret_list
     scramble_message(secret_directory, scrambled_message, 'encode')
-    
+
+#http://stackoverflow.com/questions/4967580/how-to-get-the-size-of-a-string-in-python    
 def decode(secret_directory):
     message_contents = os.listdir(secret_directory)
     message_length = len(message_contents)
@@ -56,6 +58,7 @@ def decode(secret_directory):
     scramble_message(secret_directory, scrambled_message, 'decode')
 
 #creates a list out of the users message
+#http://stackoverflow.com/questions/10610158/how-do-i-convert-string-characters-into-a-list
 def create_message_list(message):
     return list(message.lower())
 
@@ -115,6 +118,7 @@ while True:
                 message_title = raw_input('What would you like the title to be? ')
 
                 #verify title doesnt already exist
+                #http://stackoverflow.com/questions/273192/in-python-check-if-a-directory-exists-and-create-it-if-necessary
                 if not os.path.exists(MESSAGES_DIR + message_title):
                     os.makedirs(MESSAGES_DIR + message_title)
                     new_secret_directory = MESSAGES_DIR + message_title
