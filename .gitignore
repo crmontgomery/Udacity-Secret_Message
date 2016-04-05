@@ -236,3 +236,4 @@ _Pvt_Extensions
 .fake/
 *.pyproj
 secret message.sln
+cryptograph.pyc
