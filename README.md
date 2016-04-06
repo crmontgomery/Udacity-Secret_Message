@@ -6,7 +6,5 @@ This program was created as part of a Udacity nanodegree course.  The course its
 
 I am new to python and have zero experience in real cryptography.  This program is for learning purposes.
 
-#Coming soon
-Better readme
-Better code
-Better betterness.
+#Changelog
+coming soon
